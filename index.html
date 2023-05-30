@@ -210,12 +210,11 @@
             </tr>
             <tr>
                 <td class="credits" align="justify">
-                    Standard benchmark with common part segmentation datasets such as PartImageNet and PascalPart only covers common object categories. 
-                    We want to test the effectiveness of PartDistillation on much broader spectrum of semantics. 
-                    Therefore, we use an open-vocabulary object detector to extend the capability of PartDistillation over 10K ImageNet object classes. 
-                    In order to evaluate the models outside the coverage of annotated datasets, we conduct <b>manual evaluation</b> with PartDistillation as well as supervised model trained on PartImageNet. 
+                    PartDistillation marries with a strong open-vocabulary object detector and covers over 10k object categories.
+                    However, standard benchmark with common part segmentation datasets such as PartImageNet and PascalPart only covers common object categories. 
+                    Therefore, we evaluate our model outside the coverage of annotated datasets by conducting extensive <b>manual evaluation</b>.
+                    We test PartDistillation as well as supervised model trained on PartImageNet as a strong baseline. 
                     PartDistillation is more <b>precise</b>, <b> diverse</b>, and <b>general</b> compared to supervised part segmentation model. 
-                    Moreover, our method scales well over 10k ImageNet object classes.
                 </td>
             </tr>
         </table>
