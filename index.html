@@ -1,1 +1,291 @@
-<p> Testing </p>
+<!-- Thanks to url=http://www.cs.cmu.edu/~dfouhey/3DP/index.html -->
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="StyleSheet" href="assets/style.css" type="text/css" media="all">
+
+    <title>PartDistillation</title>
+    <script src="https://kit.fontawesome.com/c444c87c0c.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script type="text/javascript" async="" src="assets/ga.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    <style>
+        table.bordered,
+        th.bordered,
+        td.bordered {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <!-- bibliographic tags -->
+    <meta name="citation_title" content="PartDistillation: Learning Parts from Instance Segmentation" />
+    <meta name="citation_author" content="Cho, Jang Hyun" />
+    <meta name="citation_author" content="Kr&auml;henb&uuml;hl, Philipp" />
+    <meta name="citation_author" content="Ramanathan, Vignesh" />
+    <meta name="citation_publication_date" content="20XX" />
+    <meta name="citation_conference_title" content="XXXX" />
+    <meta name="citation_pdf_url" content="" />
+
+    <style type="text/css">
+        #primarycontent h1 {
+            font-variant: small-caps;
+        }
+
+        #primarycontent h3 {}
+
+        #primarycontent teasertext {
+            text-align: center;
+        }
+
+        #primarycontent p {
+            text-align: center;
+        }
+
+        #primarycontent {
+            text-align: justify;
+        }
+
+        #primarycontent p {
+            text-align: justify;
+        }
+
+        #primarycontent p iframe {
+            text-align: center;
+        }
+
+        #avatar {
+            border-radius: 50%;
+        }
+    </style>
+    <script type="text/javascript">
+        function togglevis(elid) {
+            el = document.getElementById(elid);
+            aelid = elid + "a";
+            ael = document.getElementById(aelid);
+            if (el.style.display == 'none') {
+                el.style.display = 'inline-table';
+                ael.innerHTML = "[Hide BibTex]";
+            } else {
+                el.style.display = 'none';
+                ael.innerHTML = "[Show BibTex]";
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div id="primarycontent">
+        <h1 align="center" itemprop="name"><strong>
+               PartDistillation: Learning Parts from Instance Segmentation
+            </strong></h1>
+
+            <table id="authors" style="margin:auto;">
+                <tr>
+                    <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                    <td>
+                        <a href="https://janghyuncho.github.io/" target="_blank">Jang Hyun Cho<sup>1,2</sup></a>
+                    </td>
+                    <td>
+                        <a href="http://philkr.net" target="_blank">Philipp Kr&auml;henb&uuml;hl<sup>2</sup></a>
+                    </td>
+                    <td>
+                        <a href="http://ai.stanford.edu/~vigneshr/" target="_blank">Vignesh Ramanathan<sup>1</sup></a>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="affliates" style="margin:auto;">
+                <tr>
+                    <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                    <td>
+                        <a href="https://ai.facebook.com/research/" target="_blank"><sup>1</sup>FAIR, Meta AI</a>
+                    </td>
+                    <td>
+                        <a href="https://www.cs.utexas.edu" target="_blank"> <sup>2</sup>The University of Texas at Austin</a>
+                    </td>
+                </tr>
+            </table>
+
+        <table id="navigate" style="margin:auto;">
+            <tr>
+                <td>
+                    <iconify-icon icon="bi:file-earmark-pdf-fill"></iconify-icon>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cho_PartDistillation_Learning_Parts_From_Instance_Segmentation_CVPR_2023_paper.pdf" target="_blank"> Paper </a>
+                </td>
+                <td>
+                    <iconify-icon icon="bi:file-earmark-pdf-fill"></iconify-icon>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Cho_PartDistillation_Learning_Parts_CVPR_2023_supplemental.pdf" target="_blank"> Supplementary </a>
+                </td>
+                <td>
+                    <iconify-icon icon="octicon:mark-github-16"></iconify-icon>
+                    <a href="https://github.com/facebookresearch/PartDistillation" target="_blank"> GitHub </a>
+                </td>
+                <td>
+                    <iconify-icon icon="bxs:quote-left"></iconify-icon>
+                    <a href="assets/bib.txt">Bibtex</a>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Overview</h3>
+        <table class="results" align="center">
+            <tr>
+                <td align="center">
+                    <img src="assets/figures/stage12.png" width="100%" /></a>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td class="credits" align="justify">
+                    We present a scalable framework to learn part segmentation from object instance labels.
+                    State-of-the-art instance segmentation models contain a surprising amount of part information.
+                    However, much of this information is hidden from plain view. 
+                    For each object instance, the part information is noisy, inconsistent,and incomplete. 
+                    PartDistillation transfers the part information of an instance segmentation model into a part segmentation model through self-supervised self-training on a large dataset.
+                    The resulting segmentation model is robust, accurate, and generalizes well.
+                    We evaluate the model on various part segmentation datasets. 
+                    Our model outperforms supervised part segmentation in zero-shot generalization performance by a large margin. 
+                    Our model outperforms when finetuned on target datasets compared to supervised counterpart and other baselines especially in few-shot regime. 
+                    Finally, our model provides a wider coverage of rare parts when evaluated over 10K object classes.
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+
+        <h3>Why PartDistillation?</h3>
+        <table id="what_is_it" style="margin:auto;">
+            <tr>
+                <td align="center">
+                    <img src="assets/figures/why_partdistillation.png" width="80%" /></a>
+                </td>
+            </tr>
+        </table>
+        
+  
+        <h3>Main Results</h3>
+        <table id="main_results" style="margin:auto;">
+            <tr>
+                <td align="center">
+                    <img src="assets/figures/unsupervised_plot.png" width="90%" /></a>
+                    SOTA unsupervised part segmentation model.
+                </td>
+                <td align="center">
+                    <img src="assets/figures/zeroshot_plot.png" width="90%" /></a>
+                    Better zero-shot part segmentation than supervised baselines.
+                </td>
+                <td align="center">
+                    <img src="assets/figures/fewshot_plot.png" width="90%" /></a>
+                    More label-efficient in few-shot part segmentation than supervised baselines.
+                </td>
+            </tr>
+        </table>
+
+        <h3>Qualitative Results</h3>
+        <table id="qualitative_results" style="margin:auto;">
+            <tr>
+                <td align="center">
+                    <img src="assets/figures/unsupervised_plot.png" width="90%" /></a>
+                    SOTA unsupervised part segmentation model.
+                </td>
+                <td align="center">
+                    <img src="assets/figures/zeroshot_plot.png" width="90%" /></a>
+                    Better zero-shot part segmentation than supervised baselines.
+                </td>
+                <td align="center">
+                    <img src="assets/figures/fewshot_plot.png" width="90%" /></a>
+                    More label-efficient in few-shot part segmentation than supervised baselines.
+                </td>
+            </tr>
+        </table>
+        
+        <h3>People</h3>
+
+        <table id="people" style="margin:auto;">
+            <tr>
+                <td></td> <!-- For some reason it scales up the first td.. so adding a dummy td -->
+                <td>
+                    <img src="assets/authors/janghyun.jpg" /><br />
+                    <a href="https://janghyuncho.github.io/" target="_blank">Jang Hyun Cho</a>
+                </td>
+                <td>
+                    <img src="assets/authors/philipp.jpg" /><br />
+                    <a href="http://philkr.net" target="_blank">Philipp Kr&auml;henb&uuml;hl</a>
+                </td>
+                <td>
+                    <img src="assets/authors/vignesh.jpg" /><br />
+                    <a href="http://ai.stanford.edu/~vigneshr/" target="_blank">Vignesh Ramanathan</a>
+                </td>
+            </tr>
+        </table>
+
+
+        <h3>Paper</h3>
+        <table id="paper" class="center">
+            <tr></tr>
+            <tr>
+                <td>
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cho_PartDistillation_Learning_Parts_From_Instance_Segmentation_CVPR_2023_paper.pdf"><img style="box-shadow: 5px 5px 2px #888888; margin: 10px"
+                            src="assets/paper_screenshot.png" width="150px" /></a>
+                </td>
+                <td></td>
+                <td>
+                    J. H. Cho, P. Kr&auml;henb&uuml;hl, V. Ramanathan<br />
+                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cho_PartDistillation_Learning_Parts_From_Instance_Segmentation_CVPR_2023_paper.pdf">PartDistillation: Learning Parts from Instance Segmentation</a><br />
+                    CVPR 2023 <br />
+                    [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cho_PartDistillation_Learning_Parts_From_Instance_Segmentation_CVPR_2023_paper.pdf">paper</a>]
+                    [<a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Cho_PartDistillation_Learning_Parts_CVPR_2023_supplemental.pdf">supp</a>]
+                    [<a href="https://github.com/facebookresearch/PartDistillation">code/models</a>]
+                    [<a href="javascript:togglevis('Cho_2023_CVPR')" id="bibtex">bibtex</a>] <br /> <br />
+        </table>
+
+
+
+        <table class="bibtex" style="display:none" id="Cho_2023_CVPR">
+            <tr>
+                <td>
+                    <pre>
+@InProceedings{Cho_2023_CVPR,
+    author    = {Cho, Jang Hyun and Kr\"ahenb\"uhl, Philipp and Ramanathan, Vignesh},
+    title     = {PartDistillation: Learning Parts From Instance Segmentation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {7152-7161}
+}
+
+</pre>
+                </td>
+            </tr>
+        </table>
+
+
+        <h3>Acknowledgement</h3>
+        <table class="results" align="center">
+            <tr>
+                <td class="credits" align="justify">
+                    This material is in part based upon work supported by the National Science Foundation under Grant No. IIS-1845485 and IIS-2006820.
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+
+</html>
