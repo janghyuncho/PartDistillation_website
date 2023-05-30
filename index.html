@@ -131,7 +131,7 @@
                 </td>
                 <td>
                     <iconify-icon icon="octicon:mark-github-16"></iconify-icon>
-                    <a href="https://github.com/facebookresearch/PartDistillation" target="_blank"> GitHub </a>
+                    <a href="https://github.com/facebookresearch/PartDistillation" target="_blank"> GitHub (coming soon) </a>
                 </td>
                 <td>
                     <iconify-icon icon="bxs:quote-left"></iconify-icon>
@@ -156,7 +156,7 @@
                     State-of-the-art instance segmentation models contain a surprising amount of part information.
                     However, much of this information is hidden from plain view. 
                     For each object instance, the part information is noisy, inconsistent,and incomplete. 
-                    PartDistillation transfers the part information of an instance segmentation model into a part segmentation model through self-supervised self-training on a large dataset.
+                    <b>PartDistillation</b> transfers the part information of an instance segmentation model into a part segmentation model through self-supervised self-training on a large dataset.
                     The resulting segmentation model is robust, accurate, and generalizes well.
                     We evaluate the model on various part segmentation datasets. 
                     Our model outperforms supervised part segmentation in zero-shot generalization performance by a large margin. 
@@ -196,20 +196,64 @@
             </tr>
         </table>
 
-        <h3>Qualitative Results</h3>
-        <table id="qualitative_results" style="margin:auto;">
+        <h3>Manual Evaluation </h3>
+        <table id="manual_result" style="margin:auto;">
             <tr>
                 <td align="center">
-                    <img src="assets/figures/unsupervised_plot.png" width="90%" /></a>
-                    SOTA unsupervised part segmentation model.
+                    <img src="assets/figures/manual.png" width="80%" /></a>
                 </td>
-                <td align="center">
-                    <img src="assets/figures/zeroshot_plot.png" width="90%" /></a>
-                    Better zero-shot part segmentation than supervised baselines.
+            </tr>
+            <tr>
+                <td class="credits" align="justify">
+                    We use an open-vocabulary object detector to extend the capability of PartDistillation over 10K ImageNet object classes.
+                    We evaluate PartDistillation and supervised model trained on PartImageNet. 
+                    PartDistillation is more <b>precise</b>, <b> diverse</b>, and <b>general</b> compared to supervised part segmentation model. 
+                    Moreover, our method scales well over 10k ImageNet object classes.
                 </td>
+            </tr>
+        </table>
+
+        <h3>Qualitative Results </h3>
+        <table id="qualitatve_result" style="margin:auto;">
+            <tr>
                 <td align="center">
-                    <img src="assets/figures/fewshot_plot.png" width="90%" /></a>
-                    More label-efficient in few-shot part segmentation than supervised baselines.
+                    <img src="assets/figures/qualitative1.png" width="80%" /></a>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Random Discovered Parts </h3>
+        <table id="qualitatve_result" class="center">
+            [<a href="javascript:togglevis('random_part_images')" id="random_parts">click here</a>] 
+        </table>
+        
+        <table class="random_parts"  style="display:none" id="random_part_images" >
+            <tr>
+                <td align="center">
+                <pre>
+                    <img src="assets/figures/rand1.png" width="80%" /></a>
+                </pre>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <pre>
+                    <img src="assets/figures/rand2.png" width="80%" /></a>
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <pre>
+                    <img src="assets/figures/rand3.png" width="80%" /></a>
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                <pre>
+                    <img src="assets/figures/rand4.png" width="80%" /></a>
+                    </pre>
                 </td>
             </tr>
         </table>
@@ -250,7 +294,7 @@
                     CVPR 2023 <br />
                     [<a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Cho_PartDistillation_Learning_Parts_From_Instance_Segmentation_CVPR_2023_paper.pdf">paper</a>]
                     [<a href="https://openaccess.thecvf.com/content/CVPR2023/supplemental/Cho_PartDistillation_Learning_Parts_CVPR_2023_supplemental.pdf">supp</a>]
-                    [<a href="https://github.com/facebookresearch/PartDistillation">code/models</a>]
+                    [<a href="https://github.com/facebookresearch/PartDistillation">code/models (coming soon)</a>]
                     [<a href="javascript:togglevis('Cho_2023_CVPR')" id="bibtex">bibtex</a>] <br /> <br />
         </table>
 
@@ -260,16 +304,16 @@
             <tr>
                 <td>
                     <pre>
-@InProceedings{Cho_2023_CVPR,
-    author    = {Cho, Jang Hyun and Kr\"ahenb\"uhl, Philipp and Ramanathan, Vignesh},
-    title     = {PartDistillation: Learning Parts From Instance Segmentation},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2023},
-    pages     = {7152-7161}
-}
+                    @InProceedings{Cho_2023_CVPR,
+                        author    = {Cho, Jang Hyun and Kr\"ahenb\"uhl, Philipp and Ramanathan, Vignesh},
+                        title     = {PartDistillation: Learning Parts From Instance Segmentation},
+                        booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+                        month     = {June},
+                        year      = {2023},
+                        pages     = {7152-7161}
+                    }
 
-</pre>
+                    </pre>
                 </td>
             </tr>
         </table>
